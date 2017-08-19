@@ -10,9 +10,18 @@ source:
   md5: 5dbdf859f6e60e05813370e2b193b92b
 
 build:
-  number: 0
+  number: 1
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
   skip: True  # [not linux]
+
+requirements:
+  build:
+    - libgcrypt
+    - krb5
+
+  run:
+    - libgcrypt
+    - python
 
 test:
   commands:
@@ -33,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - koverholt
+    - martindurant
