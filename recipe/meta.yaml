@@ -21,7 +21,7 @@ requirements:
 
   run:
     - libgcrypt
-    - python
+    - krb5
 
 test:
   commands:
