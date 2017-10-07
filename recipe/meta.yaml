@@ -18,9 +18,11 @@ requirements:
   build:
     - toolchain
     - libgcrypt
+    - libntlm
     - krb5
 
   run:
+    - libntlm
     - libgcrypt
     - krb5
 
