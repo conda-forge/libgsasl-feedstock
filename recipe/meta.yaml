@@ -16,7 +16,10 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+
+  host:
     - libgcrypt
     - libntlm
     - krb5
