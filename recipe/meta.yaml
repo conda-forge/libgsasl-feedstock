@@ -10,13 +10,16 @@ source:
   md5: 5dbdf859f6e60e05813370e2b193b92b
 
 build:
-  number: 2
+  number: 3
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+
+  host:
     - libgcrypt
     - libntlm
     - krb5
@@ -32,9 +35,9 @@ test:
     - test -f $PREFIX/include/gsasl-mech.h
     - test -f $PREFIX/include/gsasl.h
     - test -f $PREFIX/lib/libgsasl.a
-    - test -f $PREFIX/lib/libgsasl.la
-    - test -f $PREFIX/lib/libgsasl.so         # [linux]
+    - test -f $PREFIX/lib/libgsasl$SHLIB_EXT  # [unix]
     - test -f $PREFIX/lib/libgsasl.so.7       # [linux]
+    - test -f $PREFIX/lib/libgsasl.7.dylib    # [osx]
     - test -f $PREFIX/lib/libgsasl.so.7.9.6   # [linux]
 
 about:
