@@ -35,8 +35,9 @@ test:
     - test -f $PREFIX/include/gsasl-mech.h
     - test -f $PREFIX/include/gsasl.h
     - test -f $PREFIX/lib/libgsasl.a
-    - test -f $PREFIX/lib/libgsasl.so         # [linux]
+    - test -f $PREFIX/lib/libgsasl$SHLIB_EXT  # [unix]
     - test -f $PREFIX/lib/libgsasl.so.7       # [linux]
+    - test -f $PREFIX/lib/libgsasl.7.dylib    # [osx]
     - test -f $PREFIX/lib/libgsasl.so.7.9.6   # [linux]
 
 about:
