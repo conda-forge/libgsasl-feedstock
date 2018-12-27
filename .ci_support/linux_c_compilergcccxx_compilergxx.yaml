@@ -9,9 +9,9 @@ channel_targets:
 cxx_compiler:
 - gxx
 docker_image:
-- conda/c3i-linux-64
+- condaforge/linux-anvil-comp7
 krb5:
-- '1.14'
+- '1.16'
 pin_run_as_build:
   krb5:
     max_pin: x.x
