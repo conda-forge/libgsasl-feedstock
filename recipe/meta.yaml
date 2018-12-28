@@ -7,7 +7,10 @@ package:
 source:
   fn: libgsasl-{{ version }}.tar.gz
   url: ftp://ftp.gnu.org/gnu/gsasl/libgsasl-{{ version }}.tar.gz
-  md5: 5dbdf859f6e60e05813370e2b193b92b
+  sha256: 3adfb49f9c92a719dea855fd1840d698cde55d4648d332a69032ba8bea207720
+  # See https://lists.gnu.org/archive/html/bug-gnulib/2017-07/msg00057.html
+  patches:
+    - vasnprintf-osx.patch  # [osx]
 
 build:
   number: 1004
