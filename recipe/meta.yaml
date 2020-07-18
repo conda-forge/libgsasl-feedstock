@@ -13,7 +13,7 @@ source:
     - vasnprintf-osx.patch  # [osx]
 
 build:
-  number: 1004
+  number: 1005
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
   skip: True  # [win]
 
@@ -46,6 +46,10 @@ test:
 about:
   home: http://www.gnu.org/software/gsasl/
   license: LGPL-2.1
+  license_file: 
+    - COPYING.LIB 
+    - COPYING 
+
   summary: Implementation of the Simple Authentication and Security Layer framework
 
 extra:
