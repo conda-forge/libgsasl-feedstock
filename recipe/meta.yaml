@@ -10,7 +10,7 @@ source:
   sha256: 19e2f90525c531010918c50bb1febef0d7115d620150cc66153b9ce73ff814e6
   # See https://lists.gnu.org/archive/html/bug-gnulib/2017-07/msg00057.html
   patches:
-    - vasnprintf-osx.patch  # [osx]
+    # - vasnprintf-osx.patch  # [osx]
 
 build:
   number: 1005
@@ -43,7 +43,6 @@ test:
     - test -f $PREFIX/lib/libgsasl$SHLIB_EXT  # [unix]
     - test -f $PREFIX/lib/libgsasl.so.7       # [linux]
     - test -f $PREFIX/lib/libgsasl.7.dylib    # [osx]
-    - test -f $PREFIX/lib/libgsasl.so.7.9.6   # [linux]
 
 about:
   home: http://www.gnu.org/software/gsasl/
