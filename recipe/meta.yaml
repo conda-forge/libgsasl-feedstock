@@ -5,15 +5,11 @@ package:
   version: "{{ version }}"
 
 source:
-  fn: libgsasl-{{ version }}.tar.gz
   url: ftp://ftp.gnu.org/gnu/gsasl/libgsasl-{{ version }}.tar.gz
   sha256: 19e2f90525c531010918c50bb1febef0d7115d620150cc66153b9ce73ff814e6
-  # See https://lists.gnu.org/archive/html/bug-gnulib/2017-07/msg00057.html
-  patches:
-    # - vasnprintf-osx.patch  # [osx]
 
 build:
-  number: 1005
+  number: 0
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
   skip: True  # [win]
 
