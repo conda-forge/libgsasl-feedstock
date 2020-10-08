@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
+set -x
 
-export LDFLAGS=-L$PREFIX/lib 
-export CFLAGS=-I$PREFIX/include
 ./configure --with-gssapi-impl=mit --prefix=$PREFIX
-make
-make check
+make -j${CPU_COUNT}
+make check || (cat digest-md5/test-suite.log && exit 1)
 make install
