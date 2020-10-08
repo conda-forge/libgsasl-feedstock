@@ -17,5 +17,3 @@ krb5:
 pin_run_as_build:
   krb5:
     max_pin: x.x
-target_platform:
-- linux-64
