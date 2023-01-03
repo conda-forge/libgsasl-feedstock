@@ -6,10 +6,10 @@ make -j${CPU_COUNT}
 
 # Attempt to fix some file number limits on testing on osx.
 if [[ ${target_platform} == osx-* ]]; then
-    sudo sysctl -w kern.maxfiles=64000
-    sudo sysctl -w kern.maxfilesperproc=64000
-    sudo launchctl limit maxfiles 64000 64000
-    ulimit -n 64000;
+    sudo sysctl -w kern.maxfiles=128000
+    sudo sysctl -w kern.maxfilesperproc=128000
+    sudo launchctl limit maxfiles 128000 128000
+    ulimit -n 128000;
 fi
 
 make check || (cat digest-md5/test-suite.log && exit 1)
