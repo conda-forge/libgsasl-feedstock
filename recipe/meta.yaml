@@ -9,7 +9,7 @@ source:
   sha256: f1b553384dedbd87478449775546a358d6f5140c15cccc8fb574136fdc77329f
 
 build:
-  number: 0
+  number: 1
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
   skip: True  # [win]
 
