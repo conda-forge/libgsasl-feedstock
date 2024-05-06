@@ -11,5 +11,5 @@ if [[ ${target_platform} == osx-* ]]; then
     ulimit -n 64000;
 fi
 
-make check || (cat digest-md5/test-suite.log && exit 1)
+make check || (cat digest-md5/test-suite.log; cat gltests/test-suite.log; exit 1)
 make install
