@@ -39,7 +39,7 @@ about:
   home: http://www.gnu.org/software/gsasl/
   license: LGPL-2.1-or-later
   license_file: 
-    - COPYING.LIB
+    - COPYING.LESSER
     - COPYING
   summary: Implementation of the Simple Authentication and Security Layer framework
 
