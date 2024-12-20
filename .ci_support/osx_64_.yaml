@@ -16,6 +16,10 @@ channel_targets:
 - conda-forge main
 krb5:
 - '1.21'
+libgsasl:
+- '1'
+libntlm:
+- '1'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:
