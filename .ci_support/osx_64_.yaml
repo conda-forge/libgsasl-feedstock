@@ -17,7 +17,7 @@ channel_targets:
 krb5:
 - '1.21'
 libgsasl:
-- '1'
+- '2'
 libntlm:
 - '1'
 macos_machine:
