@@ -17,7 +17,7 @@ docker_image:
 krb5:
 - '1.21'
 libgsasl:
-- '1'
+- '2'
 libntlm:
 - '1'
 target_platform:
