@@ -40,7 +40,7 @@ tests:
       - test -f $PREFIX/include/gsasl.h
       - test ! -f $PREFIX/lib/libgsasl.a
       - test ! -f $PREFIX/lib/libgsasl.la
-      - test -f $PREFIX/lib/libgsasl${{ SHLIB_EXT }}
+      - test -f $PREFIX/lib/libgsasl${SHLIB_EXT}
       - if: linux
         then: test -f $PREFIX/lib/libgsasl.so.18
       - if: linux
