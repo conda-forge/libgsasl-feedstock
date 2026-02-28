@@ -13,7 +13,7 @@ source:
 
 build:
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
-  number: 1
+  number: 2
   skip: win
 
 requirements:
@@ -42,10 +42,9 @@ tests:
       - test ! -f $PREFIX/lib/libgsasl.la
       - test -f $PREFIX/lib/libgsasl${SHLIB_EXT}
       - if: linux
-        then: test -f $PREFIX/lib/libgsasl.so.18
-      - if: linux
-        then: test -f $PREFIX/lib/libgsasl.so.18.0.0
-
+        then:
+          - test -f $PREFIX/lib/libgsasl.so.18
+          - test -f $PREFIX/lib/libgsasl.so.18.0.0
 about:
   license: LGPL-2.1-or-later
   license_file:
