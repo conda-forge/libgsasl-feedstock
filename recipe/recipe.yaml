@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 2.2.2
+  version: "2.2.4"
 
 package:
   name: libgsasl
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/gsasl/gsasl-${{ version }}.tar.gz
-  sha256: 41e8e442648eccaf6459d9ad93d4b18530b96c8eaf50e3f342532ef275eff3ba
+  sha256: d32be15efd3a04cb19b232f721bdca02cc6ad7ab415df7d79fb2dd2c0da3e0be
 
 build:
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
-  number: 2
+  number: 0
   skip: win
 
 requirements:
