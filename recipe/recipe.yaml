@@ -13,7 +13,7 @@ source:
 
 build:
   # This package is a dependency of libhdfs3, which is primarily used with HDFS on Linux.
-  number: 2
+  number: 3
   skip: win
 
 requirements:
